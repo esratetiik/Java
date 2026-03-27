@@ -11,6 +11,12 @@ public class Merhaba {
 
         long l=100000000;
         System.out.println("long = " +l);
+
+        float f=34.0f;
+        System.out.println("float = " +f);
+
+        double d=3;
+        System.out.println("double" + d);
     }
        
 }
