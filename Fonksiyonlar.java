@@ -2,32 +2,33 @@ import java.util.Scanner;
 
 public class Fonksiyonlar {
 
-    static void f(int x){
-        int result = (x+2)*6;
-        System.out.println(result);
+    //OVERLOADING
+    static int add (int a, int b){
+        return a+b;
+    }
+    static int add (int a, int b, int c){
+        return a+b+c; 
+    }
+    static double add (int a, int b, double c){
+        return a+b+c; 
     }
 
-    static void  power (int s1, int s2){
-        int result = 1;
-        for(int i = 1; i<=s2; i++){
-            result *= s1;
+    //RECURSIVE 
+    static int f(int x){
+        if (x==1){
+            return 1;
         }
-         System.out.println(result);
+        return x + f(x-1);
     }
 
-    static int multi(int a, int b){
-        int result;
-        result = a*b;
-        return result;
-    }
     public static void main (String[] args){
-        f(4);
-        f(6);
-        power(2,3);
-        power(3,2);
-
-        int result = multi (2,6);
-        System.out.println(result);
+        System.out.println(add(1,2));
+        System.out.println(add(1,2,3));
+        System.out.println(add(1,2, 0.5));
+        System.out.println(f(5));
 
     }
+    
+
+    
 }
